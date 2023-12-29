@@ -2,11 +2,8 @@ const movieForm = document.querySelector("form");
 const search = document.querySelector("input");
 const searchResults = document.getElementById("search-results");
 
-const APIKEY = "cecf8342c3d41e9e916ff0a82acd0445";
-
-// const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
-//     movieTitle
-//   )}&api_key=${APIKEY}`;
+// require("dotenv").config();
+// const APIKEY = process.env.API_KEY;
 
 movieForm.addEventListener("submit", async (e) => {
   e.preventDefault();

@@ -2,7 +2,8 @@ const request = require("postman-request");
 
 // Finding movie via title search
 
-const APIKEY = "cecf8342c3d41e9e916ff0a82acd0445";
+require("dotenv").config();
+const APIKEY = process.env.API_KEY;
 
 const search = (movieTitle, callback) => {
   const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(

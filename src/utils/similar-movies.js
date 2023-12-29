@@ -1,6 +1,7 @@
 const request = require("postman-request");
 
-const APIKEY = "cecf8342c3d41e9e916ff0a82acd0445";
+require("dotenv").config();
+const APIKEY = process.env.API_KEY;
 
 const similarMovies = (id, callback) => {
   const url = `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${APIKEY}`;
